@@ -147,7 +147,7 @@ And <span style="color:red">*puVar2*</span> is user's input's XOR with 0x4242424
   } while (bVar7);
 ```
 
-* So in order to edcrypt this, we just have to perform a XOR operation of user's input with <span style="color:red">*puVar1*</span>.
+* So in order to decrypt this, we just have to perform a XOR operation of user's input with <span style="color:red">*puVar1*</span>.
 
 ![image-9.png](./image-9.png)
 
