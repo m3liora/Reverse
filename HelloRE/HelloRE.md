@@ -3,7 +3,7 @@
 
 Run the app and enter some random strings, a MessageBox popped out shown that it is incorrect.
 
-![image-1.png](./image-1.png)
+  ![image-1.png](./image-1.png)
 
 So it seems like there is a check somewhere that shown the corresponding message to what we entered.
 
@@ -15,7 +15,7 @@ So it seems like there is a check somewhere that shown the corresponding message
 
 * The second call, which is from FID_conflict:MessageBox doesn't show anything useful, so we can ignore it.
 
-![image-2.png](./image-2.png)
+    ![image-2.png](./image-2.png)
 
 * So, we're left with the ShowAppMessageBox one. Let's see which function call this function.
 
@@ -120,13 +120,13 @@ LAB_00402456:
 
 * Okay lets move on. 
 
-![image-7.png](./image-7.png) 
+  ![image-7.png](./image-7.png) 
 
 * Here, since ghidra can guess function's parameters' and variables' names, we can assume that user's input is retrieved by the <span style="color:red">*FUN_00420bd0*</span> function, and move into <span style="color:red">*_Src*</span>. It is finally converted to string, stored in <span style="color:red">*local_48*</span>. (by <span style="color:red">*_wcstombs_s*</span>).
 
 * Down here, <span style="color:red">*local_48*</span> is XOR with 0x42424242, then moved to  <span style="color:red">*puvar2*</span>. And <span style="color:red">*puVar1*</span> is assigned with value from  <span style="color:red">*DAT_005c2810*</span>, which is: 
 
-![image-8.png](./image-8.png)
+  ![image-8.png](./image-8.png)
 
 * In short, <span style="color:red">*puVar1*</span> is 
 ```
