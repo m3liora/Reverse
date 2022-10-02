@@ -112,12 +112,12 @@ undefined8 FUN_00402450(void)
 * With this in mind, we'll just have to put whatever the encrypted username is to the key (in order to jump to the "OK" message).
 (Notice the ENDIANNESS) 
 
-  ![image-2.png](./image-2.png)
+  ![image-3.png](./image-3.png)
 
 * Result:
 ```
-username: a
-key: F7FDDD7DAFFAD37A
+username: phongnh
+key: 2E8DB55F7E9A07BF
 ```
 
 # Tool in use: 
