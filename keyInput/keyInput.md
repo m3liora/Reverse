@@ -3,7 +3,7 @@
 
 * Run this app and enter a random username, key. The app closed unexpectedly. So it seems like if we don't enter the right one, it will free the memory. Thus exit the app.
 
-* Put this in <span style="color:red">*DIE*</span>, it appeared to be a PE64 app.
+* Put this in <span style="color:red">*DIE*</span>, it appeared to be a PE64 app. So we will use <span style="color:red">*x64dbg*</span> for this one.
 
 # Reverse
 
