@@ -156,3 +156,8 @@ And <span style="color:red">*puVar2*</span> is user's input's XOR with 0x4242424
 ```
 key : W3lc0me_t0_th3_R3v3rs3_3ng1n33r1n9_w0rld!!!
 ```
+
+# Tool in use: 
+* IDA
+* Ghidra
+

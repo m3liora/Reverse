@@ -120,4 +120,8 @@ username: a
 key: F7FDDD7DAFFAD37A
 ```
 
+# Tool in use: 
+* x64dbg
+* Ghidra
+
 
