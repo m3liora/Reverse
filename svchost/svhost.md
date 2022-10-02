@@ -16,6 +16,26 @@
 
 * With the use of these 2 libraries, I assume that this file is connecting to some server.
 
+
+* Knowing this, we'll fire up <span style="color:red">*Wireshark*</span> and analyze the traffic.
+
+    ![image-8.png](./image-8.png)
+
+* As you can see, there is a packet with the IP address of 192.168.244.128 and port 137 continuously sends request to 192.168.244.255.
+
+* Moreover, NBNS is a server responsible for maintaining a list of mappings between NetBIOS computer names and network addresses for a network that uses NetBIOS as its naming service. When the computer needs to communicate with a remote machine, it queries the name server for the network address of the remote machine. I assume that the program takes something from the victim computer and sends to the server. (See https://pentestlab.blog/2018/05/08/nbns-spoofing/)
+
+* Click on Info, we see that there are queries sent to U.LEWD.SE<00>
+
+    ![image-9.png](./image-9.png)
+
+* Google <span style="color:red">*U.LEWD.SE*</span>, this is what I found:
+
+    ![image-10.png](./image-10.png)
+
+* So <span style="color:red">*U.LEWD.SE*</span> is actually the domain name we are looking for!
+
+
 # Reverse
 
 * Since this app use HTTP, we will search for HTTP in WININET. We're end up with this:
@@ -176,7 +196,7 @@ uint FUN_0041d16a(undefined4 param_1,char param_2)
 
 * In short, here is the program's logic (up to the <span style="color:red">*connect*</span> part).
 
-    - <span style="color:red">*entry*</span> calls <span style="color:red">*FUN_0041d16a*</span>
+    - <span style="color:red">*entry*</span> calls <span style="color:red">*FUN_0041d16a*</span>.
     - <span style="color:red">*FUN_0041d16a*</span> is then calls <span style="color:red">*FUN_0041cea2*</span> for HTTP establishment.
     - <span style="color:red">*FUN_0041cea2*</span> calls <span style="color:red">*FUN_0040d35a*</span>, which is used for mapping. 
     - After that, there is a call to <span style="color:red">*FUN_00406c4b*</span>, which is then call <span style="color:red">*FUN_00406ca6*</span>.
@@ -201,6 +221,8 @@ uint FUN_0041d16a(undefined4 param_1,char param_2)
     return s;
     }
     ```
+
+    - The server's name: <span style="color:red">*U.LEWD.SE*</span>.
 
 # Tool in use: 
 * Wireshark
