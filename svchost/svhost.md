@@ -10,7 +10,7 @@
 
     ![image-1.png](./image-1.png)
 
-    - <span style="color:red">*Ws2_32.dll*</span> establishes and handles network connections with Windows Socket API.
+    - <span style="color:red">*Ws2_32.dll*</span> establishes and handles network connections via Windows Socket API.
 
     ![image-2.png](./image-2.png)
 
