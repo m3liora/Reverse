@@ -62,7 +62,7 @@ undefined8 FUN_00402450(void)
     - And in both cases, it produced the same value stored in <span style="color:red">*EDX*</span>
     (7AD3FAAF7DDDFD7F in my case)
 
-                                            ![image-1.png](./image-1.png)
+      ![image-1.png](./image-1.png)
 
     - We can safely assume that this function takes the username, performs some encrypting, and uses that encrypted value for <span style="color:red">*FUN_00401662*</span>, which leads us to the "OK" message (or not).
 
@@ -112,7 +112,7 @@ undefined8 FUN_00402450(void)
 * With this in mind, we'll just have to put whatever the encrypted username is to the key (in order to jump to the "OK" message).
 (Notice the ENDIANNESS) 
 
-                        ![image-2.png](./image-2.png)
+  ![image-2.png](./image-2.png)
 
 * Result:
 ```
