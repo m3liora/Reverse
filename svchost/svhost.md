@@ -39,7 +39,6 @@ int FUN_00406ece(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefi
 
 ```
 SOCKET FUN_0040822e(void)
-
 {
   SOCKET s;
   int iVar1;
@@ -57,7 +56,7 @@ SOCKET FUN_0040822e(void)
 }
 ```
 
-* Since there is only one function (<span style="color:red">*FUN_0040822e*</span>)call <span style="color:red">*connect*</span>, it is guaranteed to be used to connect to the target server.
+* Since there is only one function (<span style="color:red">*FUN_0040822e*</span>) call <span style="color:red">*connect*</span>, it is guaranteed to be used to connect to the target server.
 
 # Program's Logic
 
@@ -182,6 +181,26 @@ uint FUN_0041d16a(undefined4 param_1,char param_2)
     - <span style="color:red">*FUN_0041cea2*</span> calls <span style="color:red">*FUN_0040d35a*</span>, which is used for mapping. 
     - After that, there is a call to <span style="color:red">*FUN_00406c4b*</span>, which is then call <span style="color:red">*FUN_00406ca6*</span>.
     - Finally, <span style="color:red">*FUN_00406ca6*</span> creates a bat file that runs in the background then delete itself.
+
+    - The function to connect to server:
+    ```
+    SOCKET FUN_0040822e(void)
+    {
+    SOCKET s;
+    int iVar1;
+    sockaddr *unaff_EDI;
+    
+    s = socket((uint)unaff_EDI->sa_family,1,6);
+    if (s != 0xffffffff) {
+        iVar1 = connect(s,unaff_EDI,((unaff_EDI->sa_family != 2) - 1 & 0xfffffff4) + 0x1c);
+        if (iVar1 != 0) {
+        closesocket(s);
+        s = 0xffffffff;
+        }
+    }
+    return s;
+    }
+    ```
 
 # Tool in use: 
 * Wireshark
