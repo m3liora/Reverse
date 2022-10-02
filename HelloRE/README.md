@@ -1,11 +1,11 @@
 
 # Analysis
 
-Run the app and enter some random strings, a MessageBox popped out shown that it is incorrect.
+* Run the app and enter some random strings, a MessageBox popped out shown that it is incorrect.
 
   ![image-1.png](./image-1.png)
 
-So it seems like there is a check somewhere that shown the corresponding message to what we entered.
+* So it seems like there is a check somewhere that shown the corresponding message to what we entered.
 
 # Reverse
 
@@ -153,11 +153,12 @@ And <span style="color:red">*puVar2*</span> is user's input's XOR with 0x4242424
 
 * Convert this to ASCII and we have cracked the program.
 
+# Result
 ```
 key : W3lc0me_t0_th3_R3v3rs3_3ng1n33r1n9_w0rld!!!
 ```
 
-# Tool in use: 
+# Tools: 
 * IDA
 * Ghidra
 

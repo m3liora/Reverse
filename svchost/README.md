@@ -194,15 +194,9 @@ uint FUN_0041d16a(undefined4 param_1,char param_2)
     }
     ```
 
-* In short, here is the program's logic (up to the <span style="color:red">*connect*</span> part).
-
-    - <span style="color:red">*entry*</span> calls <span style="color:red">*FUN_0041d16a*</span>.
-    - <span style="color:red">*FUN_0041d16a*</span> is then calls <span style="color:red">*FUN_0041cea2*</span> for HTTP establishment.
-    - <span style="color:red">*FUN_0041cea2*</span> calls <span style="color:red">*FUN_0040d35a*</span>, which is used for mapping. 
-    - After that, there is a call to <span style="color:red">*FUN_00406c4b*</span>, which is then call <span style="color:red">*FUN_00406ca6*</span>.
-    - Finally, <span style="color:red">*FUN_00406ca6*</span> creates a bat file that runs in the background then delete itself.
-
-    - The function to connect to server:
+# Summary 
+* The server's name: <span style="color:red">*U.LEWD.SE*</span>.
+* The function to connect to server:
     ```
     SOCKET FUN_0040822e(void)
     {
@@ -221,10 +215,15 @@ uint FUN_0041d16a(undefined4 param_1,char param_2)
     return s;
     }
     ```
+* The program's logic (up to the <span style="color:red">*connect*</span> part).
 
-    - The server's name: <span style="color:red">*U.LEWD.SE*</span>.
+    - <span style="color:red">*entry*</span> calls <span style="color:red">*FUN_0041d16a*</span>.
+    - <span style="color:red">*FUN_0041d16a*</span> is then calls <span style="color:red">*FUN_0041cea2*</span> for HTTP establishment.
+    - <span style="color:red">*FUN_0041cea2*</span> calls <span style="color:red">*FUN_0040d35a*</span>, which is used for mapping. 
+    - After that, there is a call to <span style="color:red">*FUN_00406c4b*</span>, which is then call <span style="color:red">*FUN_00406ca6*</span>.
+    - Finally, <span style="color:red">*FUN_00406ca6*</span> creates a bat file that runs in the background then delete itself.
 
-# Tool in use: 
+# Tools: 
 * Wireshark
 * IDA
 * Ghidra

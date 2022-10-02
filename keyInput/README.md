@@ -114,13 +114,13 @@ undefined8 FUN_00402450(void)
 
   ![image-3.png](./image-3.png)
 
-* Result:
+# Result:
 ```
 username: phongnh
 key: 2E8DB55F7E9A07BF
 ```
 
-# Tool in use: 
+# Tools: 
 * x64dbg
 * Ghidra
 
