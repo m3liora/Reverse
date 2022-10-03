@@ -179,7 +179,7 @@ uint FUN_0041d16a(undefined4 param_1,char param_2)
     }
     ```
 
-    - It actually creates a bat file that run in the background every time the computer start.
+    - It actually creates a bat file that run in the background every time you start the program.
 
     - What's more, <span style="color:red">*FUN_00406ca6*</span> also calls <span style="color:red">*FUN_0040a548*</span>, which is used to delete itself.
 
