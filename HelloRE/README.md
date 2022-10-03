@@ -29,7 +29,7 @@
 
 ![image-5.png](./image-5.png)
 
-* Notice that we only search for user call, so just check whichever has the "FUNC" prefix. Let's try the first one.
+* Notice that we only search for user call, so just check whichever has the "FUN" prefix. Let's try the first one.
 
 ```
 void __fastcall FUN_00402390(int param_1)

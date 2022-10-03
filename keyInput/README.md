@@ -8,8 +8,8 @@
 # Reverse
 
 * Open this in <span style="color:red">*Ghidra*</span>, we can easily locate the main function.
-undefined8 FUN_00402450(void)
 ```
+undefined8 FUN_00402450(void)
 {
   size_t sVar1;
   undefined8 uVar2;
