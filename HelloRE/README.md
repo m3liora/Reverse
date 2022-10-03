@@ -7,6 +7,8 @@
 
 * So it seems like there is a check somewhere that shown the corresponding message to what we entered.
 
+* Put this in <span style="color:red">*DIE*</span>, it appeared to be a PE32 app.
+
 # Reverse
 
 * Fire up Ghidra, and keep in mind that the check will call a MessageBox, we will first search for any calls to MessageBox.
@@ -134,7 +136,7 @@ LAB_00402456:
 ```
 And <span style="color:red">*puVar2*</span> is user's input's XOR with 0x42424242.
 
-* The following code shows that we will XOR each byte of user's input with 0x42424242 at a time. 
+* The following code shows that we will check at byte of the user's input and the string given by the program at the frist place. If one pair doesn't matched, it jump to the bad message! 
 ```
   do {
     puVar5 = puVar2;
